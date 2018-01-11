@@ -1,22 +1,18 @@
 package main
 
 import (
-	"github.com/micmonay/keybd_event"
+	"libs"
+	"os/exec"
+	"fmt"
 )
 
 const (
-	emptySearch = ""
-)
-
-var (
-	wordsForSearch string
+	npmUpdate = "--help"
 )
 
 func main() {
-
-	//Copy selected text to clipboard
-	copy, _ := keybd_event.NewKeyBonding()
-	copy.SetKeys(keybd_event.VK_C)
-	copy.HasCTRL(true)
-	copy.Launching()
+	libs.StartNPM(npmUpdate)
+	npm:= exec.Command("npm", npmUpdate)
+	fmt.Printf(npm)
+	//npm.Start()
 }
