@@ -14,23 +14,21 @@ const (
 	chromeSearch   = "https://www.google.ru/search?q="
 )
 
-var (
-	wordsForSearch string
-)
-
 func main() {
 	//Clean clipboard
 
-	//clipboard.WriteAll(emptySearch)
+	clipboard.WriteAll(emptySearch)
 	//Copy selected text to clipboard
-	copy, _ := keybd_event.NewKeyBonding()
-	copy.SetKeys(keybd_event.VK_INSERT)
-	copy.HasCTRL(true)
-	copy.Launching()
+	copyKey, _ := keybd_event.NewKeyBonding()
+	copyKey.SetKeys(keybd_event.VK_INSERT)
+	copyKey.HasCTRL(true)
+	copyKey.Launching()
 	//Read clipboard
 	wordsForSearch, _ := clipboard.ReadAll()
 	chromeSearchFinal := chromeSearch + wordsForSearch
 	//And to Chrome
 	chrome := exec.Command(chromeCommand, chromeSettings, chromeSearchFinal)
-	chrome.Start()
+	if (wordsForSearch != emptySearch) {
+		chrome.Start()
+	}
 }
