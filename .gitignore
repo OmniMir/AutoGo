@@ -22,3 +22,8 @@ $RECYCLE.BIN/
 
 #IDE config files
 .idea/
+
+#Golang binaries
+*.o
+*.a
+*.so
