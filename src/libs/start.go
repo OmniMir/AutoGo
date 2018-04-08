@@ -17,6 +17,7 @@ const (
 
 	//Graphical apps
 	chromeCommand = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+	operaCommand = "C:\\Program Files (x86)\\Opera\\launcher.exe"
 	uwpCommand    = "C:\\Windows\\explorer.exe"
 )
 
@@ -38,6 +39,9 @@ func StartInCmd(command string, settings string) {
 //Graphical apps
 func StartChrome(settings string) {
 	start(chromeCommand, settings)
+}
+func StartOpera(settings string) {
+	start(operaCommand, settings)
 }
 func StartUWP(settings string) {
 	start(uwpCommand, settings)
