@@ -1,18 +1,30 @@
 package libs
 
-import "os/exec"
+import (
+	"os/exec"
+	"fmt"
+	"time"
+)
 
 const (
+	cmdCommand = "cmd"
+	startCommand = "/C start "
+	apmCommand      = "apm "
+	composerCommand = "composer "
+	npmCommand      = "npm "
 	chromeCommand   = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
 	uwpCommand      = "C:\\Windows\\explorer.exe"
-	apmCommand      = "apm"
-	composerCommand = "composer"
-	npmCommand      = "npm"
 )
 
 func Start(command string, settings string) {
 	newRun := exec.Command(command, settings)
 	newRun.Start()
+}
+
+func StartInCmd(command string, settings string) {
+	newRun := exec.Command(command, settings)
+	stdout, _ := newRun.CombinedOutput()
+	fmt.Printf(string(stdout))
 }
 
 func StartChrome(settings string) {
@@ -24,13 +36,20 @@ func StartUWP(settings string) {
 }
 
 func StartAPM(settings string) {
-	Start(apmCommand, settings)
+	settings = startCommand + apmCommand + settings
+	Start(cmdCommand, settings)
 }
 
 func StartComposer(settings string) {
-	Start(composerCommand, settings)
+	settings = startCommand + composerCommand + settings
+	Start(cmdCommand, settings)
 }
 
 func StartNPM(settings string) {
-	Start(npmCommand, settings)
+	settings = startCommand + npmCommand + settings
+	Start(cmdCommand, settings)
+}
+
+func StartSleep(seconds time.Duration) {
+	time.Sleep(seconds * time.Second)
 }

@@ -21,18 +21,22 @@ func main() {
 
 	//Windows Applications
 	libs.Start(sumo, "") //Need F5
+	libs.StartSleep(3)
 	libs.Start(winUpdate, "")
+	libs.StartSleep(3)
 	libs.StartUWP(winStore)
+	libs.StartSleep(3)
 
 	//Sites
 	sitesToChrome := chromeSettings + " " + siteChromium + " " + siteSamlab
 	libs.StartChrome(sitesToChrome)
-	libs.StartChrome(siteSamlab)
+	libs.StartSleep(3)
 
 	//CLI Utilities
 	libs.StartAPM(apmUpdate)
 	libs.StartComposer(composerUpdate)
 	libs.StartNPM(npmUpdate)
+	libs.StartSleep(3)
 
 	//Steam
 	/*
