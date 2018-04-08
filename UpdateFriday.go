@@ -3,12 +3,10 @@ package main
 import "libs"
 
 const (
-	space = " "
-
 	//Windows Applications
-	sumo           = "C:\\Program Files (x86)\\SUMo\\SUMo.exe"	//winUpdate not work -> run application as document
-	winUpdate      = "C:\\Users\\Sergey\\AppData\\Local\\Packages\\windows.immersivecontrolpanel_cw5n1h2txyewy\\LocalState\\Indexed\\Settings\\ru-RU\\AAA_SystemSettings_MusUpdate_UpdateActionButton.settingcontent-ms"
-	winStore       = "shell:Appsfolder\\Microsoft.WindowsStore_8wekyb3d8bbwe!App"
+	sumo      = "C:\\Program Files (x86)\\SUMo\\SUMo.exe" //winUpdate not work -> run application as document
+	winUpdate = "C:\\Users\\Sergey\\AppData\\Local\\Packages\\windows.immersivecontrolpanel_cw5n1h2txyewy\\LocalState\\Indexed\\Settings\\ru-RU\\AAA_SystemSettings_MusUpdate_UpdateActionButton.settingcontent-ms"
+	winStore  = "shell:Appsfolder\\Microsoft.WindowsStore_8wekyb3d8bbwe!App"
 	kaspersky = "C:\\Program Files (x86)\\Kaspersky Lab\\Kaspersky Internet Security 18.0.0\\avpui.exe"
 	//steam = "C:\\Program Files (x86)\\Steam\\Steam.exe"
 
@@ -26,15 +24,15 @@ const (
 func main() {
 
 	//Windows Applications
-	libs.StartSimple(sumo) //Need F5
+	libs.StartApp(sumo) //Need F5
 	libs.StartSleep()
-	libs.StartSimple(winUpdate)
+	libs.StartApp(winUpdate)
 	libs.StartSleep()
 	libs.StartUWP(winStore)
 	libs.StartSleep()
 
 	//Sites
-	sitesToChrome := chromeSettings + space + siteChromium + space + siteSamlab
+	sitesToChrome := chromeSettings + libs.Space + siteChromium + libs.Space + siteSamlab
 	libs.StartChrome(sitesToChrome)
 	libs.StartSleep()
 
@@ -46,14 +44,14 @@ func main() {
 
 	//Steam
 	/*
-	//Before need start service
-	libs.Start(steam, "")
-	 */
+		//Before need start service
+		libs.Start(steam, "")
+	*/
 
 	//Kaspersky Software Update
-	libs.Start(kaspersky, "")
+	libs.StartApp(kaspersky)
 	/*
-	Some mouse magic))
-	 */
+		Some mouse magic))
+	*/
 
 }

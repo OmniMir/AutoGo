@@ -1,7 +1,7 @@
 package libs
 
 const (
-space  = " "
+Space  = " "
 )
 
 func main () {
