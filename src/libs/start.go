@@ -21,11 +21,11 @@ const (
 )
 
 //Generic appstart
-func Start(command string, settings string) {
+func start(command string, settings string) {
 	newRun := exec.Command(command, settings)
 	newRun.Start()
 }
-func StartSimple(command string) {
+func StartApp(command string) {
 	newRun := exec.Command(command, "")
 	newRun.Start()
 }
@@ -37,24 +37,24 @@ func StartInCmd(command string, settings string) {
 
 //Graphical apps
 func StartChrome(settings string) {
-	Start(chromeCommand, settings)
+	start(chromeCommand, settings)
 }
 func StartUWP(settings string) {
-	Start(uwpCommand, settings)
+	start(uwpCommand, settings)
 }
 
 //Commandline apps
 func StartAPM(settings string) {
-	settings = startCommand + space + apmCommand + space + settings
-	Start(cmdCommand, settings)
+	settings = startCommand + Space + apmCommand + Space + settings
+	start(cmdCommand, settings)
 }
 func StartComposer(settings string) {
-	settings = startCommand + space + composerCommand + space + settings
-	Start(cmdCommand, settings)
+	settings = startCommand + Space + composerCommand + Space + settings
+	start(cmdCommand, settings)
 }
 func StartNPM(settings string) {
-	settings = startCommand + space + npmCommand + space + settings
-	Start(cmdCommand, settings)
+	settings = startCommand + Space + npmCommand + Space + settings
+	start(cmdCommand, settings)
 }
 
 //Subsidiary apps
