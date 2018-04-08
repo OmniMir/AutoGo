@@ -10,10 +10,10 @@ const (
 
 	//Commandline apps
 	cmdCommand      = "cmd"
-	startCommand    = "/C start "
-	apmCommand      = "apm "
-	composerCommand = "composer "
-	npmCommand      = "npm "
+	startCommand    = "/C start"
+	apmCommand      = "apm"
+	composerCommand = "composer"
+	npmCommand      = "npm"
 
 	//Graphical apps
 	chromeCommand = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
@@ -45,17 +45,18 @@ func StartUWP(settings string) {
 
 //Commandline apps
 func StartAPM(settings string) {
-	settings = startCommand + apmCommand + settings
+	settings = startCommand + space + apmCommand + space + settings
 	Start(cmdCommand, settings)
 }
 func StartComposer(settings string) {
-	settings = startCommand + composerCommand + settings
+	settings = startCommand + space + composerCommand + space + settings
 	Start(cmdCommand, settings)
 }
 func StartNPM(settings string) {
-	settings = startCommand + npmCommand + settings
+	settings = startCommand + space + npmCommand + space + settings
 	Start(cmdCommand, settings)
 }
+
 //Subsidiary apps
 func StartSleep() {
 	time.Sleep(3 * time.Second)
