@@ -24,7 +24,7 @@ func main() {
 
 	//And to Chrome
 	if wordsForSearch != emptySearch {
-		chromeCommand := chromeSettings + " " + chromeSearch + wordsForSearch
+		chromeCommand := chromeSettings + libs.Space + chromeSearch + wordsForSearch
 		libs.StartChrome(chromeCommand)
 	}
 }
