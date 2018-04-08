@@ -23,8 +23,8 @@ func main() {
 	wordsForSearch, _ := clipboard.ReadAll()
 
 	//And to Chrome
-	if (wordsForSearch != emptySearch) {
-		chromeCommand :=  chromeSettings + " " + chromeSearch + wordsForSearch
+	if wordsForSearch != emptySearch {
+		chromeCommand := chromeSettings + " " + chromeSearch + wordsForSearch
 		libs.StartChrome(chromeCommand)
 	}
 }
