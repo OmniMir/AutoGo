@@ -1,0 +1,32 @@
+language: go
+
+go:
+  - "1.10.x"
+env:
+  global:
+  - GOARCH=amd64
+  - GOOS=windows
+
+before_install:
+ - go get github.com\atotto\clipboard
+ - go get github.com\go-vgo\robotgo
+ - go get github.com\lxn\walk
+ - go get github.com\lxn\win
+ - go get github.com\micmonay\keybd_event
+ - go get gopkg.in\Knetic\govaluate.v3
+
+script:
+ - go build GoogleIt.go
+ - go build NewComicsWednesday.go
+ - go build ParadigmShift.go
+ - go build ToMovies.go
+ - go build UpdateFriday.go
+
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file_glob: true
+  file: directory/**/*
+  skip_cleanup: true
+  on:
+    tags: true
