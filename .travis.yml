@@ -2,8 +2,7 @@ language: go
 
 go:
   - "1.10.x"
- env:
-  global:
+env:
   - GOARCH=amd64
   - GOOS=windows
 
