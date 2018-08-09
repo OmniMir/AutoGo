@@ -10,8 +10,9 @@ env:
 notifications:
   email: false
 
+go_import_path: ./src/libs
+
 before_install:
-  go get ./src/libs
 # - go get github.com/atotto/clipboard
 # - go get github.com/go-vgo/robotgo
 # - go get github.com/lxn/walk
