@@ -18,7 +18,7 @@ const (
 	//Graphical apps
 	chromeCommand = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
 	operaCommand = "C:\\Program Files (x86)\\Opera\\launcher.exe"
-	uwpCommand    = "C:\\Windows\\explorer.exe"
+	ExplorerCommand    = "C:\\Windows\\explorer.exe"
 )
 
 //Generic appstart
@@ -37,6 +37,10 @@ func StartInCmd(command string, settings string) {
 }
 
 //Graphical apps
+func StartExplorer(settings string) {
+	start(ExplorerCommand, settings)
+}
+
 func StartChrome(settings string) {
 	start(chromeCommand, settings)
 }
@@ -44,7 +48,7 @@ func StartOpera(settings string) {
 	start(operaCommand, settings)
 }
 func StartUWP(settings string) {
-	start(uwpCommand, settings)
+	start(ExplorerCommand, settings)
 }
 
 //Commandline apps
@@ -63,5 +67,5 @@ func StartNPM(settings string) {
 
 //Subsidiary apps
 func StartSleep() {
-	time.Sleep(3 * time.Second)
+	time.Sleep(1 * time.Second)
 }
