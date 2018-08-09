@@ -7,13 +7,16 @@ env:
   - GOARCH=amd64
   - GOOS=windows
 
+notifications:
+  email: false
+
 before_install:
- - go install github.com/atotto/clipboard
- - go install github.com/go-vgo/robotgo
- - go install github.com/lxn/walk
- - go install github.com/lxn/win
- - go install github.com/micmonay/keybd_event
- - go install gopkg.in/Knetic/govaluate.v3
+ - go install ./vendor/github.com/atotto/clipboard
+ - go install ./vendor/github.com/go-vgo/robotgo
+ - go install ./vendor/github.com/lxn/walk
+ - go install ./vendor/github.com/lxn/win
+ - go install ./vendor/github.com/micmonay/keybd_event
+ - go install ./vendor/gopkg.in/Knetic/govaluate.v3
 
 script:
  - go build GoogleIt.go
