@@ -3,6 +3,7 @@ language: go
 go:
   - "1.10.x"
 env:
+  global:
   - GOARCH=amd64
   - GOOS=windows
 
@@ -10,12 +11,12 @@ notifications:
   email: false
 
 before_install:
- - go get github.com/atotto/clipboard
+# - go get github.com/atotto/clipboard
 # - go get github.com/go-vgo/robotgo
- - go get github.com/lxn/walk
- - go get github.com/lxn/win
- - go get github.com/micmonay/keybd_event
- - go get gopkg.in/Knetic/govaluate.v3
+# - go get github.com/lxn/walk
+# - go get github.com/lxn/win
+# - go get github.com/micmonay/keybd_event
+# - go get gopkg.in/Knetic/govaluate.v3
 
 script:
  - go build GoogleIt.go
