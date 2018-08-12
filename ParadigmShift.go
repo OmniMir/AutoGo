@@ -2,11 +2,11 @@ package main
 
 import (
 	. "github.com/lxn/walk/declarative"
-	. "libs"
+	. "./libs"
 	"github.com/lxn/walk"
 )
 
-
+//Windows GUI application
 func main() {
 	var mainWindow *walk.MainWindow
 

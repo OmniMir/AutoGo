@@ -1,6 +1,8 @@
 package main
 
-import "libs"
+import (
+	. "./libs"
+)
 
 const (
 	//Windows Applications
@@ -24,32 +26,32 @@ const (
 func main() {
 
 	//Windows Applications
-	libs.StartApp(sumo) //Need F5
-	libs.StartSleep()
-	libs.StartApp(winUpdate)
-	libs.StartSleep()
-	libs.StartUWP(winStore)
-	libs.StartSleep()
+	StartApp(sumo) //Need F5
+	StartSleep()
+	StartApp(winUpdate)
+	StartSleep()
+	StartUWP(winStore)
+	StartSleep()
 
 	//Sites
-	sitesToChrome := chromeSettings + libs.Space + siteChromium + libs.Space + siteSamlab
-	libs.StartChrome(sitesToChrome)
-	libs.StartSleep()
+	sitesToChrome := chromeSettings + Space + siteChromium + Space + siteSamlab
+	StartChrome(sitesToChrome)
+	StartSleep()
 
 	//CLI Utilities
-	libs.StartAPM(apmUpdate)
-	libs.StartComposer(composerUpdate)
-	libs.StartNPM(npmUpdate)
-	libs.StartSleep()
+	StartAPM(apmUpdate)
+	StartComposer(composerUpdate)
+	StartNPM(npmUpdate)
+	StartSleep()
 
 	//Steam
 	/*
 		//Before need start service
-		libs.Start(steam, "")
+		Start(steam, "")
 	*/
 
 	//Kaspersky Software Update
-	libs.StartApp(kaspersky)
+	StartApp(kaspersky)
 	/*
 		Some mouse magic))
 	*/

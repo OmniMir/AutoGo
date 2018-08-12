@@ -1,11 +1,13 @@
 package main
 
-import "libs"
+import (
+	. "./libs"
+)
 
 const (
 	premieres = "http://www.kinopoisk.ru/premiere/ru/"
 )
 
 func main() {
-	libs.StartChrome(premieres)
+	StartChrome(premieres)
 }
