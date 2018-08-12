@@ -27,3 +27,4 @@ $RECYCLE.BIN/
 *.o
 *.a
 *.so
+src/
