@@ -28,6 +28,7 @@ func main() {
 				Text: "🎦 Сериалы",
 				OnClicked: func() {
 					series()
+					mainWindow.Close()
 				},
 			},
 			PushButton{
