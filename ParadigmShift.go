@@ -1,9 +1,9 @@
 package main
 
 import (
-	. "github.com/lxn/walk/declarative"
 	. "./libs"
 	"github.com/lxn/walk"
+	. "github.com/lxn/walk/declarative"
 )
 
 //Windows GUI application
@@ -12,10 +12,10 @@ func main() {
 
 	MainWindow{
 		AssignTo: &mainWindow,
-		Title:   "Смена Парадигмы",
-		MinSize: Size{600, 400},
-		Font:Font{PointSize: 20},
-		Layout:  VBox{},
+		Title:    "Парадигмы",
+		MinSize:  Size{600, 400},
+		Font:     Font{PointSize: 20},
+		Layout:   VBox{},
 		Children: []Widget{
 			PushButton{
 				Text: "⏬ Загрузки",
@@ -60,10 +60,11 @@ func main() {
 func comics() {
 	//My comics folders
 	StartExplorer("G:\\Comics")
+	StartExplorer("G:\\Comics")
 	StartExplorer("K:\\Комиксы")
-	StartApp("K:\\Комиксы\\Список.txt")
 	//Comics reading
 	StartApp("C:\\Program Files\\CDisplayEx\\CDisplayEx.exe")
+	StartApp("K:\\Комиксы\\Список.txt")
 	StartChrome("--app-id=cbbipihhaanmdjaclfmpjfnnecifpjdn")
 }
 
