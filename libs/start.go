@@ -1,8 +1,7 @@
 package libs
 
 import (
-	"fmt"
-	"os/exec"
+		"os/exec"
 	"time"
 )
 
@@ -30,10 +29,9 @@ func StartApp(command string) {
 	newRun := exec.Command(command, "")
 	newRun.Start()
 }
-func StartInCmd(command string, settings string) {
+func StartCmd(command string, settings string) {
 	newRun := exec.Command(command, settings)
-	stdout, _ := newRun.CombinedOutput()
-	fmt.Printf(string(stdout))
+	newRun.Start()
 }
 
 //Graphical apps
