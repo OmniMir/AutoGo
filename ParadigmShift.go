@@ -66,7 +66,7 @@ func comics() {
 	//Comics reading
 	StartApp("C:\\Program Files\\CDisplayEx\\CDisplayEx.exe")
 	StartApp("K:\\Комиксы\\Список.txt")
-	StartChrome("--app-id=cbbipihhaanmdjaclfmpjfnnecifpjdn")
+	StartChrome("https://www.comixology.com/free-comics")
 }
 
 func dating() {
