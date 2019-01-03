@@ -13,6 +13,7 @@ const (
 	apmCommand      = "apm"
 	composerCommand = "composer"
 	npmCommand      = "npm"
+	VirtualDesktop  = "C:\\Program Files\\AutoGo\\VirtualDesktop.exe"
 
 	//Graphical apps
 	chromeCommand   = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"

@@ -25,6 +25,9 @@ const (
 
 func main() {
 
+	//Swith to New Desktop
+	StartCmd(VirtualDesktop, "/Switch:1")
+
 	//Windows Applications
 	StartApp(sumo) //Need F5
 	StartSleep()
