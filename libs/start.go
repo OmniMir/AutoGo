@@ -15,9 +15,9 @@ const (
 	npmCommand      = "npm"
 
 	//Graphical apps
-	chromeCommand = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-	operaCommand = "C:\\Program Files (x86)\\Opera\\launcher.exe"
-	ExplorerCommand    = "C:\\Windows\\explorer.exe"
+	chromeCommand   = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+	operaCommand    = "C:\\Program Files (x86)\\Opera\\launcher.exe"
+	ExplorerCommand = "C:\\Windows\\explorer.exe"
 )
 
 //Generic appstart
