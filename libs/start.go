@@ -1,7 +1,7 @@
 package libs
 
 import (
-		"os/exec"
+	"os/exec"
 	"time"
 )
 
@@ -66,5 +66,5 @@ func StartNPM(settings string) {
 
 //Subsidiary apps
 func StartSleep() {
-	time.Sleep(1 * time.Second)
+	time.Sleep(500 * time.Millisecond)
 }
