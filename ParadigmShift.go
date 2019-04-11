@@ -60,20 +60,23 @@ func main() {
 }
 
 func comics() {
-	//My comics folders
-	StartExplorer("G:\\Comics")
-	StartExplorer("G:\\Comics")
-	StartExplorer("K:\\Комиксы")
 	//Comics reading
 	StartApp("C:\\Program Files\\CDisplayEx\\CDisplayEx.exe")
-	StartApp("K:\\Комиксы\\Список.txt")
+	StartCmd("notepad", "K:\\Комиксы\\Список.txt")
 	StartChrome("--app-id=cbbipihhaanmdjaclfmpjfnnecifpjdn")
+	//My comics folders
+	StartExplorer("G:\\Comics")
+	StartSleep()
+	StartExplorer("G:\\Comics")
+	StartSleep()
+	StartExplorer("K:\\Комиксы")
 }
 
 func dating() {
 	//How to start Edge))
 	StartApp("%windir%\\explorer.exe shell:Appsfolder\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge")
 	//DatingDialog
+
 }
 
 func downloads() {
@@ -101,11 +104,16 @@ func manga() {
 }
 
 func series() {
-	//My series folders
-	StartExplorer("D:\\ОмниСериалы")
-	StartExplorer("G:\\Torrent")
-	StartExplorer("G:\\Сериалы")
 	//Player and remote control
 	StartApp("C:\\Program Files\\MPC-HC\\mpc-hc64.exe")
 	StartApp("C:\\Program Files (x86)\\Unified Remote\\RemoteServerWin.exe")
+	//Remote cotrol on smartphone via webhook
+	http.Get("https://vash.omnimir.ru/macrodroid/serials.php")
+	//My series folders
+	StartExplorer("G:\\Torrent")
+	StartSleep()
+	StartExplorer("D:\\ОмниСериалы")
+	StartSleep()
+	StartExplorer("G:\\Сериалы")
+
 }
