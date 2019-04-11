@@ -15,7 +15,6 @@ const (
 	//Sites
 	chromeSettings = "--new-window"
 	siteChromium   = "http://chromium.woolyss.com/#windows-64-bit"
-	siteSamlab     = "http://samlab.ws/category/samsoft/"
 
 	//CLI Utilities
 	apmUpdate      = "upgrade --confirm=false"
@@ -37,8 +36,9 @@ func main() {
 	StartSleep()
 
 	//Sites
-	sitesToChrome := chromeSettings + Space + siteChromium + Space + siteSamlab
-	StartChrome(sitesToChrome)
+	StartChrome("--new-window")
+	StartSleep()
+	StartChrome(siteChromium)
 	StartSleep()
 
 	//CLI Utilities
