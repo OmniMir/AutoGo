@@ -6,7 +6,7 @@ import (
 const (
 	dc         = "C:\\Program Files\\ApexDC\\ApexDC-x64.exe"
 	comixology = "https://www.comixology.com/free-comics"
-	new28oi    = "https://msk.28oi.ru/item/by_article/74"
+	new28oi    = "http://msk28oi.ru/collection/novinki"
 )
 
 func main() {
