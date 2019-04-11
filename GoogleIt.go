@@ -1,9 +1,8 @@
 package main
 
 import (
-	//Libs for clipboard and
+	. "github.com/OmniMir/AutoGo/libs"
 	"github.com/atotto/clipboard"
-	. "./libs"
 )
 
 const (

@@ -1,9 +1,10 @@
 package main
 
 import (
-	. "./libs"
+	. "github.com/OmniMir/AutoGo/libs"
 	"github.com/lxn/walk"
 	. "github.com/lxn/walk/declarative"
+	"net/http"
 )
 
 //Windows GUI application
