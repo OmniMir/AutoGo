@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "./libs"
+	. "github.com/OmniMir/AutoGo/libs"
 )
 
 const (
