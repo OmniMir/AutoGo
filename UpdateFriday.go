@@ -7,7 +7,7 @@ import (
 const (
 	//Windows Applications
 	sumo      = "C:\\Program Files (x86)\\SUMo\\SUMo.exe" //winUpdate not work -> run application as document
-	winUpdate = "C:\\Users\\Sergey\\AppData\\Local\\Packages\\windows.immersivecontrolpanel_cw5n1h2txyewy\\LocalState\\Indexed\\Settings\\ru-RU\\AAA_SystemSettings_MusUpdate_UpdateActionButton.settingcontent-ms"
+	winUpdate = "ms-settings:windowsupdate"
 	winStore  = "shell:Appsfolder\\Microsoft.WindowsStore_8wekyb3d8bbwe!App"
 	kaspersky = "C:\\Program Files (x86)\\Kaspersky Lab\\Kaspersky Internet Security 19.0.0\\avpui.exe"
 	//steam = "C:\\Program Files (x86)\\Steam\\Steam.exe"
@@ -31,7 +31,7 @@ func main() {
 	//Windows Applications
 	StartApp(sumo) //Need F5
 	StartSleep()
-	StartApp(winUpdate)
+	StartUWP(winUpdate)
 	StartSleep()
 	StartUWP(winStore)
 	StartSleep()
