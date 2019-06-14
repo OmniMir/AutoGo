@@ -19,13 +19,6 @@ func main() {
 		Layout:   VBox{},
 		Children: []Widget{
 			PushButton{
-				Text: "⏬ Загрузки",
-				OnClicked: func() {
-					downloads()
-					mainWindow.Close()
-				},
-			},
-			PushButton{
 				Text: "🎦 Сериалы",
 				OnClicked: func() {
 					series()
@@ -36,6 +29,13 @@ func main() {
 				Text: "📘 Комиксы",
 				OnClicked: func() {
 					comics()
+					mainWindow.Close()
+				},
+			},
+			PushButton{
+				Text: "⏬ Загрузки",
+				OnClicked: func() {
+					downloads()
 					mainWindow.Close()
 				},
 			},
