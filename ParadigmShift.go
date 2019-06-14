@@ -62,7 +62,8 @@ func main() {
 func comics() {
 	//Comics reading
 	StartApp("C:\\Program Files\\CDisplayEx\\CDisplayEx.exe")
-	StartCmd("notepad", "K:\\Комиксы\\Список.txt")
+	StartCmd("C:\\Windows\\System32\\notepad.exe", "K:\\Комиксы\\Список.txt")
+	//StartApp("K:\\Комиксы\\Список.txt")
 	StartChrome("--app-id=cbbipihhaanmdjaclfmpjfnnecifpjdn")
 	//My comics folders
 	StartExplorer("G:\\Comics")
