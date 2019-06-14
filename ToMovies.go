@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	premieres = "http://www.kinopoisk.ru/premiere/ru/"
+	premieres = "www.kinopoisk.ru/premiere/ru/"
 )
 
 func main() {

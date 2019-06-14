@@ -14,7 +14,7 @@ const (
 
 	//Sites
 	chromeSettings = "--new-window"
-	siteChromium   = "http://chromium.woolyss.com/#windows-64-bit"
+	siteChromium   = "chromium.woolyss.com/#windows-64-bit"
 
 	//CLI Utilities
 	apmUpdate      = "upgrade --confirm=false"

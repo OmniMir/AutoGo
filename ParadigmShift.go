@@ -89,14 +89,14 @@ func downloads() {
 	//My sites
 	StartChrome("--new-window")
 	StartSleep()
-	StartChrome("http://baibako.tv/browse.php")
-	StartChrome("http://newstudio.tv/")
-	StartChrome("http://www.lostfilm.tv/")
-	StartChrome("https://vk.com/sunshine.studio")
-	StartChrome("https://comicsdb.ru/")
-	StartChrome("http://animanga.ru/")
-	StartChrome("http://rikudou.ru/")
-	StartChrome("http://mangachan.me/user/kapsilon/newest")
+	StartChrome("baibako.tv/browse.php")
+	StartChrome("newstudio.tv/")
+	StartChrome("www.lostfilm.tv/")
+	StartChrome("vk.com/koshara.serials")
+	StartChrome("comicsdb.ru/")
+	StartChrome("animanga.ru/")
+	StartChrome("rikudou.ru/")
+	StartChrome("mangachan.me/user/kapsilon/newest")
 }
 
 func manga() {
