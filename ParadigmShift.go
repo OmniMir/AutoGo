@@ -11,7 +11,7 @@ import (
 func main() {
 	var mainWindow *walk.MainWindow
 
-	MainWindow{
+	err := MainWindow{
 		AssignTo: &mainWindow,
 		Title:    "Парадигмы",
 		MinSize:  Size{600, 400},
@@ -55,6 +55,7 @@ func main() {
 			},
 		},
 	}.Create()
+	Check(err)
 
 	mainWindow.Run()
 }
@@ -110,8 +111,9 @@ func series() {
 	//Player and remote control
 	StartApp("C:\\Program Files\\MPC-HC\\mpc-hc64.exe")
 	StartApp("C:\\Program Files (x86)\\Unified Remote\\RemoteServerWin.exe")
-	http.Get("https://vash.omnimir.ru/macrodroid/serials.php")
 	//Remote control on smartphone via webhook
+	_ , err := http.Get("https://vash.omnimir.ru/macrodroid/serials.php")
+	Check(err)
 	//My series folders
 	StartExplorer("G:\\Torrent")
 	StartSleep()
