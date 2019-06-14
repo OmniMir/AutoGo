@@ -67,6 +67,8 @@ func comics() {
 	//My comics folders
 	StartExplorer("G:\\Comics")
 	StartSleep()
+	StartExplorer("K:\\Комиксы")
+	StartSleep()
 	StartExplorer("G:\\Comics")
 	StartSleep()
 	StartExplorer("K:\\Комиксы")
@@ -107,8 +109,8 @@ func series() {
 	//Player and remote control
 	StartApp("C:\\Program Files\\MPC-HC\\mpc-hc64.exe")
 	StartApp("C:\\Program Files (x86)\\Unified Remote\\RemoteServerWin.exe")
-	//Remote cotrol on smartphone via webhook
 	http.Get("https://vash.omnimir.ru/macrodroid/serials.php")
+	//Remote control on smartphone via webhook
 	//My series folders
 	StartExplorer("G:\\Torrent")
 	StartSleep()
