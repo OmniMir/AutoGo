@@ -7,6 +7,7 @@ import (
 
 func main() {
 		googleIt()
+		operaIt()
 	}
 
 }
@@ -25,4 +26,9 @@ func googleIt() {
 		chromeCommand := chromeSettings + Space + chromeSearch + wordsForSearch
 		StartChrome(chromeCommand)
 	}
+}
+
+func operaIt() {
+	url, _ := clipboard.ReadAll()
+	StartOpera(url)
 }
