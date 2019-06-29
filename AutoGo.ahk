@@ -8,10 +8,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 return
 
 ~^#c::
+Send {F2}
 Copy()
+Send {Escape}
 return
 
 ~^!o::
+Send {!d}
 Copy()
 return
 
