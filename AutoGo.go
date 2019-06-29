@@ -1,6 +1,8 @@
 package main
 
 import (
+	"flag"
+	"fmt"
 	. "github.com/OmniMir/AutoGo/libs"
 	"github.com/go-vgo/robotgo/clipboard"
 	"strconv"
@@ -8,9 +10,21 @@ import (
 )
 
 func main() {
+	//Reading special flags
+	google := flag.Bool("google", false, "Call to Google")
+	opera := flag.Bool("opera", false, "From Chrome to Opera")
+	comics := flag.Bool("comics", false, "Comics Increment")
+	flag.Parse()
+
+	//Choosing right mode
+	if *google {
 		googleIt()
+	} else if *opera {
 		operaIt()
+	} else if *comics {
 		comicsIncrement()
+	} else {
+		fmt.Println("You need right flag")
 	}
 
 }
