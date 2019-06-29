@@ -103,7 +103,7 @@ func downloads() {
 	StartSleep()
 	StartChrome("rikudou.ru/")
 	StartSleep()
-	StartChrome("mangachan.me/user/kapsilon/newest")
+	StartChrome("manga-chan.me/user/kapsilon/newest")
 }
 
 func manga() {
