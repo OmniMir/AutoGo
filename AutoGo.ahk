@@ -8,12 +8,21 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 return
 
 ~^#c::
+Copy()
 return
 
 ~^!o::
+Copy()
 return
 
 ~^#g::
+Copy()
 return
 
 ;FUNCTIONS
+Copy(){
+  Sleep 100
+  Clipboard := ""
+  Send ^c
+  ClipWait
+}
