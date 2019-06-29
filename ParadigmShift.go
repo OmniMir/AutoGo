@@ -111,7 +111,7 @@ func manga() {
 	StartExplorer("K:\\Манга")
 	StartExplorer("G:\\Download")
 	//Tool for renaming
-	StartApp("C:\\Program Files (x86)\\Total Commander\\TOTALCMD64.EXE")
+	StartApp("C:\\Program Files (x86)\\Double Commander\\doublecmd.exe")
 }
 
 func series() {
