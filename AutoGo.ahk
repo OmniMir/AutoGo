@@ -5,21 +5,25 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;HOTKEYS
 ~^#v::
+Run .\AutoGo.exe --comics
 return
 
 ~^#c::
 Send {F2}
 Copy()
 Send {Escape}
+Run .\AutoGo.exe --comics
 return
 
 ~^!o::
 Send {!d}
 Copy()
+Run .\AutoGo.exe --opera
 return
 
 ~^#g::
 Copy()
+Run .\AutoGo.exe --google
 return
 
 ;FUNCTIONS
