@@ -2,25 +2,24 @@ package main
 
 import (
 	. "github.com/OmniMir/AutoGo/libs"
-	"github.com/atotto/clipboard"
-)
-
-const (
-	emptySearch    = ""
-	chromeSettings = "--new-window"
-	chromeSearch   = "https://www.google.ru/search?q="
+	"github.com/go-vgo/robotgo/clipboard"
 )
 
 func main() {
-	//Clean clipboard
-	clipboard.WriteAll(emptySearch)
+		googleIt()
+	}
 
-	//Copy selected text to clipboard
-	PressCopy()
+}
+
+func googleIt() {
+	const (
+		emptySearch    = ""
+		chromeSettings = "--new-window"
+		chromeSearch   = "www.google.ru/search?q="
+	)
 
 	//Read clipboard
 	wordsForSearch, _ := clipboard.ReadAll()
-
 	//And to Chrome
 	if wordsForSearch != emptySearch {
 		chromeCommand := chromeSettings + Space + chromeSearch + wordsForSearch
