@@ -3,6 +3,9 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+WinWidth := A_ScreenWidth
+WinHeight := (A_ScreenHeight - 40)/2
+
 ;HOTKEYS
 ~^#v::
 Run .\AutoGo.exe --comics
@@ -24,6 +27,20 @@ return
 ~^#g::
 Copy()
 Run .\AutoGo.exe --google
+return
+
+RAlt & Up:: ;Window to Up
+WinRestore A
+WinMove A, , 0, 0, WinWidth, WinHeight
+return
+
+RAlt & Down:: ;Window to Down
+WinRestore A
+WinMove A, , 0, (WinHeight + 1), WinWidth, WinHeight
+return
+
+RAlt & RWin:: ;Window Max when Win+Up not working
+WinMaximize A
 return
 
 ;FUNCTIONS
