@@ -9,25 +9,25 @@ WinWidth := A_ScreenWidth
 WinHeight := (A_ScreenHeight - 40)/2
 
 ;HOTKEYS
-~^#v::
+^#v:: ;Comics Increment
 Run .\AutoGo.exe --comics
 return
 
-~^#c::
+^#c:: ;Comics Increment Folder
 Send {F2}
 Copy()
 Send {Escape}
 Run .\AutoGo.exe --comics
 return
 
-~^!o::
+#>o:: ;Chrome to Opera
 Send !d
 Copy()
 Send ^w
 Run .\AutoGo.exe --opera
 return
 
-~^#g::
+#g:: ;Search in Google
 Copy()
 Run .\AutoGo.exe --google
 return
@@ -47,7 +47,7 @@ WinMaximize A
 return
 
 ;FUNCTIONS
-Copy(){
+Copy(){ ;Copy text to Clipboard
   Sleep 100
   Clipboard := ""
   Send ^c
