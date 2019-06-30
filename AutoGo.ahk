@@ -49,4 +49,5 @@ Copy(){
   Clipboard := ""
   Send ^c
   ClipWait
+  return
 }
