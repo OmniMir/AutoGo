@@ -21,8 +21,9 @@ Run .\AutoGo.exe --comics
 return
 
 ~^!o::
-Send {!d}
+Send !d
 Copy()
+Send ^w
 Run .\AutoGo.exe --opera
 return
 
