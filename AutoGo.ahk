@@ -32,6 +32,7 @@ Copy()
 Run .\AutoGo.exe --google
 return
 
+;WINDOW MANAGMENT
 RAlt & Up:: ;Window to Up
 WinRestore A
 WinMove A, , 0, 0, WinWidth, WinHeight
