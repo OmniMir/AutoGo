@@ -32,6 +32,14 @@ Copy()
 Run .\AutoGo.exe --google
 return
 
+^-:: ;Arrow Plus
+Send {+}{>}
+return
+
+^=:: ;Arrow Equal
+Send {=}{>}
+return
+
 ;WINDOW MANAGMENT
 RAlt & Up:: ;Window to Up
 WinRestore A
