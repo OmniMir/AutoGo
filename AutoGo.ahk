@@ -40,6 +40,19 @@ return
 Send {=}{>}
 return
 
+; CALL TO APPS
+^!sc033:: ;Notepad (Б)
+Run %A_WinDir%\System32\notepad.exe
+return
+
+^!p:: ;Passwords
+Run %A_ProgramFiles%\KeePassXC\KeePassXC.exe
+return
+
+^!r:: ;Passwords
+Run %A_ProgramFiles%\WinRAR\WinRAR.exe
+return
+
 ;WINDOW MANAGMENT
 RAlt & Up:: ;Window to Up
 WinRestore A
