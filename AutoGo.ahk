@@ -49,7 +49,7 @@ return
 Run %A_ProgramFiles%\KeePassXC\KeePassXC.exe
 return
 
-^!r:: ;Passwords
+^!r:: ;WinRAR
 Run %A_ProgramFiles%\WinRAR\WinRAR.exe
 return
 
