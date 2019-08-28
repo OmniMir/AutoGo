@@ -89,7 +89,6 @@ func comicsIncrement() {
 
 	//New numbering
 	newTitleAndNumber := existedTitle + hashtag + prefix + newNumber + appendix
-	fmt.Println(newTitleAndNumber)
 	clipboard.WriteAll(newTitleAndNumber)
 }
 
