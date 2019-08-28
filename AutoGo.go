@@ -71,10 +71,13 @@ func comicsIncrement() {
 		number = existedNumber
 	}
 
-	//Begin with Zero
+	//Begin with 0 and 09
 	prefix := ""
 	if strings.HasPrefix(number, "0") {
 		prefix = "0"
+	}
+	if strings.HasPrefix(number, "09") {
+		prefix = ""
 	}
 
 	//Ranging
