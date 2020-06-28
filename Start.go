@@ -1,4 +1,4 @@
-package libs
+package main
 
 import (
 	"os/exec"
@@ -6,7 +6,6 @@ import (
 )
 
 const (
-
 	//Commandline apps
 	cmdCommand      = "cmd"
 	startCommand    = "/C start"
@@ -14,10 +13,9 @@ const (
 	composerCommand = "composer"
 	npmCommand      = "npm"
 	VirtualDesktop  = "C:\\Program Files\\AutoGo\\VirtualDesktop.exe"
-
 	//Graphical apps
 	chromeCommand   = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-	operaCommand    = "C:\\Program Files (x86)\\Opera\\launcher.exe"
+	operaCommand    = "C:\\Program Files\\Opera\\launcher.exe"
 	ExplorerCommand = "C:\\Windows\\explorer.exe"
 )
 

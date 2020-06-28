@@ -1,59 +1,16 @@
 package main
 
 import (
-	"flag"
-	"fmt"
-	. "github.com/OmniMir/AutoGo/libs"
 	"github.com/go-vgo/robotgo/clipboard"
 	"strconv"
 	"strings"
 )
+const (
+	hashtag = "#"
+)
 
-func main() {
-	//Reading special flags
-	google := flag.Bool("google", false, "Call to Google")
-	opera := flag.Bool("opera", false, "From Chrome to Opera")
-	comics := flag.Bool("comics", false, "Comics Increment")
-	flag.Parse()
+func ComicsIncrement() {
 
-	//Choosing right mode
-	if *google {
-		googleIt()
-	} else if *opera {
-		operaIt()
-	} else if *comics {
-		comicsIncrement()
-	} else {
-		fmt.Println("You need right flag")
-	}
-
-}
-
-func googleIt() {
-	const (
-		emptySearch    = ""
-		chromeSettings = "--new-window"
-		chromeSearch   = "www.google.ru/search?q="
-	)
-
-	//Read clipboard
-	wordsForSearch, _ := clipboard.ReadAll()
-	//And to Chrome
-	if wordsForSearch != emptySearch {
-		chromeCommand := chromeSettings + Space + chromeSearch + wordsForSearch
-		StartChrome(chromeCommand)
-	}
-}
-
-func operaIt() {
-	url, _ := clipboard.ReadAll()
-	StartOpera(url)
-}
-
-func comicsIncrement() {
-	const (
-		hashtag = "#"
-	)
 	//Getting existed information
 	existedName, _ := clipboard.ReadAll()
 	if !strings.Contains(existedName,hashtag){

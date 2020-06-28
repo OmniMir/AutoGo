@@ -1,14 +1,13 @@
 package main
 
 import (
-	. "github.com/OmniMir/AutoGo/libs"
 	"github.com/lxn/walk"
 	. "github.com/lxn/walk/declarative"
 	"net/http"
 )
 
 //Windows GUI application
-func main() {
+func ParadigmShift() {
 	var mainWindow *walk.MainWindow
 
 	err := MainWindow{
@@ -89,7 +88,7 @@ func downloads() {
 	//My sites
 	StartChrome("--new-window")
 	StartSleep()
-	StartChrome("baibako.tv/browse.php")
+	StartChrome("baibako.tv/browse.php?search=&incldead=0&cat=0&videoformat=4")
 	StartSleep()
 	StartChrome("newstudio.tv/")
 	StartSleep()

@@ -14,15 +14,7 @@ Rejoice
 
 **Build**
 
-go build -i AutoGo.go -ldflags="-H windowsgui"
-
-go build -i NewComicsWednesday.go
-
-go build -i ParadigmShift.go -ldflags="-H windowsgui"
-
-go build -i ToMovies.go
-
-go build -i UpdateFriday.go 
+go build
 
 Ahk2Exe.exe /in AutoGo.ahk /out AutoGoAHK.exe
 

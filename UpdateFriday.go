@@ -1,9 +1,5 @@
 package main
 
-import (
-	. "github.com/OmniMir/AutoGo/libs"
-)
-
 const (
 	//Windows Applications
 	sumo      = "C:\\Program Files (x86)\\SUMo\\SUMo.exe" //winUpdate not work -> run application as document
@@ -13,7 +9,7 @@ const (
 	//steam = "C:\\Program Files (x86)\\Steam\\Steam.exe"
 
 	//Sites
-	chromeSettings = "--new-window"
+	//chromeSettings = "--new-window"
 	siteChromium   = "chromium.woolyss.com/#windows-64-bit"
 
 	//CLI Utilities
@@ -22,11 +18,10 @@ const (
 	npmUpdate      = "update -g"
 )
 
-func main() {
+func UpdateFriday() {
 
 	//Swith to New Desktop
 	StartCmd(VirtualDesktop, "/Switch:1")
-
 	//Windows Applications
 	StartApp(sumo) //Need F5
 	StartSleep()
