@@ -20,6 +20,9 @@ $RECYCLE.BIN/
 *.url
 *.exe
 
+# Tasks
+```*
+
 #IDE config files
 .idea/
 
