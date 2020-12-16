@@ -118,7 +118,7 @@ func series() {
 	StartApp("C:\\Program Files\\MPC-HC\\mpc-hc64.exe")
 	StartApp("C:\\Program Files (x86)\\Unified Remote\\RemoteServerWin.exe")
 	//Remote control on smartphone via webhook
-	_ , err := http.Get("https://vash.omnimir.ru/macrodroid/serials.php")
+	_, err := http.Get("https://vash.omnimir.ru/macrodroid/serials.php")
 	Check(err)
 	//My series folders
 	StartExplorer("G:\\Torrent")

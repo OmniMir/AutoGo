@@ -1,78 +1,116 @@
-;ENVIRONMENT
+;;ENVIRONMENT
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
+;#Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-;VARIABLES
+
+;;VARIABLES
 WinWidth := A_ScreenWidth
 WinHeight := (A_ScreenHeight - 40)/2
 
-;HOTKEYS
-^#v:: ;Comics Increment
+
+;;HOTKEYS
+;Comics Increment (Ctrl + Win + V)
+^#v::
 Run .\AutoGo.exe --comics
+Send {Blind}{Ctrl up}
 return
 
-^#c:: ;Comics Increment Folder
+;Comics Increment Folder (Ctrl + Win + C)
+^#c::
 Send {F2}
 Copy()
 Send {Escape}
 Run .\AutoGo.exe --comics
+Send {Blind}{Ctrl up}
 return
 
-#>o:: ;Chrome to Opera
+;Clipboard History (Ctrl + Win + X)
+^#x::
+Send #v
+Send {Blind}{Ctrl up}
+return
+
+;Chrome to Opera (RightWin + O)
+#>o::
 Send !d
 Copy()
 Send ^w
 Run .\AutoGo.exe --opera
 return
 
-#g:: ;Search in Google
+;Search in Google (RightWin + ?)
+#>sc035::
 Copy()
 Run .\AutoGo.exe --google
 return
 
-^-:: ;Arrow Plus
-Send {+}{>}
+;Arrow Plus (Ctrl + "-")
+^-::
+Send {+}
+Send {>}
 return
 
-^=:: ;Arrow Equal
-Send {=}{>}
+;Arrow Equal (Ctrl + "=")
+^=::
+Send {=}
+Send {>}
 return
 
-; CALL TO APPS
-^!sc033:: ;Notepad (Б)
+;Accent mark (Win + "`")
+#sc029::
+Send {U+0301}
+return
+
+
+;;CALL TO APPS
+;Notepad (Ctrl + Alt + Б)
+^!sc033::
 Run %A_WinDir%\System32\notepad.exe
 return
 
-^!p:: ;Passwords
+;Passwords (Ctrl + Alt + P)
+^!p:: 
 Run %A_ProgramFiles%\KeePassXC\KeePassXC.exe
 return
 
-^!r:: ;WinRAR
+;WinRAR (Ctrl + Alt + R)
+^!r::
 Run %A_ProgramFiles%\WinRAR\WinRAR.exe
 return
 
-;WINDOW MANAGMENT
-RAlt & Up:: ;Window to Up
+
+;;WINDOW MANAGMENT
+;Window to Top (Ctrl + Space)
+Ctrl & Space::
+WinSet, AlwaysOnTop, Toggle, A ; A is Active Window
+return
+
+;Window to Up (RightAlt + Up)
+RAlt & Up::
 WinRestore A
 WinMove A, , 0, 0, WinWidth, WinHeight
 return
 
-RAlt & Down:: ;Window to Down
+;Window to Down (RightAlt + Down)
+RAlt & Down::
 WinRestore A
 WinMove A, , 0, (WinHeight + 1), WinWidth, WinHeight
 return
 
-RAlt & RWin:: ;Window Max when Win+Up not working
+;Window Max when Win+Up not working (RightAlt + RightWin)
+RAlt & RWin::
 WinMaximize A
 return
 
-;FUNCTIONS
-Copy(){ ;Copy text to Clipboard
+
+;;FUNCTIONS
+;Copy text to Clipboard
+Copy(){ 
   Sleep 100
   Clipboard := ""
   Send ^c
-  ClipWait
+  ClipWait, 2 ;Timeout of 2 seconds
   return
 }

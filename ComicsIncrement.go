@@ -5,6 +5,7 @@ import (
 	"strconv"
 	"strings"
 )
+
 const (
 	hashtag = "#"
 )
@@ -13,7 +14,7 @@ func ComicsIncrement() {
 
 	//Getting existed information
 	existedName, _ := clipboard.ReadAll()
-	if !strings.Contains(existedName,hashtag){
+	if !strings.Contains(existedName, hashtag) {
 		return
 	}
 	existedTitle, existedNumber := stringInTwo(existedName, hashtag)
@@ -21,7 +22,7 @@ func ComicsIncrement() {
 	//Only Number
 	number := ""
 	appendix := ""
-	if strings.Contains(existedNumber,Space){
+	if strings.Contains(existedNumber, Space) {
 		number, appendix = stringInTwo(existedNumber, Space)
 		appendix = Space + appendix
 	} else {
@@ -38,8 +39,8 @@ func ComicsIncrement() {
 	}
 
 	//Ranging
-	if strings.Contains(existedNumber,"*"){
-	//TODO
+	if strings.Contains(existedNumber, "*") {
+		//TODO
 	}
 
 	//Incrementing
@@ -52,7 +53,7 @@ func ComicsIncrement() {
 	clipboard.WriteAll(newTitleAndNumber)
 }
 
-func stringInTwo (full string, delimiter string) (first string, second string) {
+func stringInTwo(full string, delimiter string) (first string, second string) {
 	numberAndAppendix := strings.SplitN(full, delimiter, 2)
 	return numberAndAppendix[0], numberAndAppendix[1]
 }

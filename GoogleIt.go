@@ -12,7 +12,6 @@ const (
 
 func GoogleIt() {
 
-
 	//Read clipboard
 	wordsForSearch, _ := clipboard.ReadAll()
 	//And to Chrome
