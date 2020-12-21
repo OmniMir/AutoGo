@@ -39,6 +39,12 @@ Send {=}
 Send {>}
 return
 
+;Clipboard Alphabet Sort (AltGr + Z)
+*!>z::
+Run AutoGo --alphabet
+Blinder()
+return
+
 ;Clipboard History (Ctrl + Win + X)
 ^#x::
 Send #v
