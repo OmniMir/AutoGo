@@ -4,6 +4,12 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+;;EXE VERSION
+;@Ahk2Exe-SetName AutoGoAHK
+;@Ahk2Exe-SetDescription AutoGo Companion
+;@Ahk2Exe-SetCompanyName OmniMir
+;@Ahk2Exe-SetVersion 1.0
+
 
 ;;VARIABLES
 WinWidth := A_ScreenWidth
