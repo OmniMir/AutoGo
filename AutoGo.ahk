@@ -212,10 +212,10 @@ Blinder(){
 }
 
 ;Copy text to Clipboard
-Copy(){ 
-  Sleep 100
-  Clipboard := ""
-  Send ^c
-  ClipWait, 2 ;Timeout of 2 seconds
-  return
+Copy(){
+	Sleep 100
+	Clipboard := ""
+	Send ^c
+	ClipWait, 2 ;Timeout of 2 seconds
+	return
 }
