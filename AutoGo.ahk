@@ -17,13 +17,6 @@ Run .\AutoGo.exe --comics
 Send {Blind}{Ctrl up}
 return
 
-;Comics Increment Folder (Ctrl + Win + C)
-^#c::
-Send {F2}
-Copy()
-Send {Escape}
-Run .\AutoGo.exe --comics
-Send {Blind}{Ctrl up}
 return
 
 ;Clipboard History (Ctrl + Win + X)
@@ -50,6 +43,49 @@ return
 ^-::
 Send {+}
 Send {>}
+
+;;WINDOWS EXPLORER CONTROL
+If WinActive(ahk_exe Explorer.exe)
+{
+	;Comics Increment Folder (Ctrl + Win + C)
+	^#c::
+	Send {F2}
+	Copy()
+	Send {Escape}
+	Run AutoGo --comics
+	Blinder()
+	return
+
+	;Explorer to Double Commander (AltGr + C)
+	*!>c::
+	Send ^l
+	Copy()
+	Run AutoGo --doublecmd
+	return
+
+	;Explorer to TagScanner (AltGr + M)
+	*!>m::
+	Send ^l
+	Copy()
+	Run AutoGo --tagscanner
+	return
+
+	;Explorer to Windows Terminal (AltGr + T)
+	*!>t::
+	Send ^l
+	Copy()
+	Run AutoGo --terminal
+	return
+
+	;Explorer to WinRAR (AltGr + R)
+	*!>r::
+	Send ^l
+	Copy()
+	Run AutoGo --winrar
+	return
+}
+
+
 return
 
 ;Arrow Equal (Ctrl + "=")
