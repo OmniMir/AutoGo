@@ -165,6 +165,14 @@ return
 ;Notepad (Ctrl + Alt + Б)
 ^!sc033::
 Run %A_WinDir%\System32\notepad.exe
+;Chrome Update Service (Ctrl + Alt + U)
+^!u::
+Run .\ServiceChrome.exe
+return
+
+;Office Service (Ctrl + Alt + O)
+^!o::
+Run .\ServiceOffice.exe
 return
 
 ;Passwords (Ctrl + Alt + P)
