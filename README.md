@@ -12,7 +12,11 @@ cd AutoGo
 
 go build -ldflags="-H windowsgui -s -w"
 
-Ahk2Exe.exe /in AutoGo.ahk /out AutoGoAHK.exe
+ahk2exe.exe /in AutoGo.ahk /out AutoGoAHK.exe
+
+ps2exe.ps1 .\ServiceChrome.ps1 -noConsole
+
+ps2exe.ps1 .\ServiceOffice.ps1 -noConsole
 
 
 
