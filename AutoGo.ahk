@@ -18,7 +18,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;;VARIABLES
 AutoGo := ".\AutoGo.exe"
 WinWidth := A_ScreenWidth
-WinHeight := (A_ScreenHeight - 40)/2
+WinHeight := (A_ScreenHeight - 40) ;Windows Taskbar Height = 40
 
 
 ;;HOTKEYS
@@ -179,26 +179,33 @@ return
 
 
 ;;WINDOW MANAGMENT
+;Window Max when Win+Up not working (AltGr + RightWin)
+RAlt & RWin::
+WinMaximize A
+return
+
+;Window to Down (AltGr + Down)
+RAlt & Down::
+WinRestore A
+WinMove A, , 0, (WinHeight/2 + 1), WinWidth, (WinHeight/2)
+return
+
 ;Window to Top (Ctrl + Space)
 Ctrl & Space::
 WinSet, AlwaysOnTop, Toggle, A ; A is Active Window
 return
 
-;Window to Up (RightAlt + Up)
+;Window to NotePad (Ctrl + AltGr + Down)
+RAlt & Right::
+indent := 300
+WinRestore A
+WinMove A, , (indent/2), (WinHeight/2 - indent), (WinWidth - indent), (WinHeight/2 + indent)
+return
+
+;Window to Up (AltGr + Up)
 RAlt & Up::
 WinRestore A
-WinMove A, , 0, 0, WinWidth, WinHeight
-return
-
-;Window to Down (RightAlt + Down)
-RAlt & Down::
-WinRestore A
-WinMove A, , 0, (WinHeight + 1), WinWidth, WinHeight
-return
-
-;Window Max when Win+Up not working (RightAlt + RightWin)
-RAlt & RWin::
-WinMaximize A
+WinMove A, , 0, 0, WinWidth, (WinHeight/2)
 return
 
 
