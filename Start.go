@@ -13,10 +13,14 @@ const (
 	composerCommand = "composer"
 	npmCommand      = "npm"
 	VirtualDesktop  = "C:\\Program Files\\AutoGo\\VirtualDesktop.exe"
-	//Graphical apps
-	chromeCommand   = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-	operaCommand    = "C:\\Program Files\\Opera\\launcher.exe"
-	ExplorerCommand = "C:\\Windows\\explorer.exe"
+	//Graphical Apps
+	doublecmdCommand  = "C:\\Program Files\\Double Commander\\doublecmd.exe"
+	edgeCommand       = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+	ExplorerCommand   = "C:\\Windows\\explorer.exe"
+	chromeCommand     = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+	operaCommand      = "C:\\Program Files\\Opera\\launcher.exe"
+	tagscannerCommand = "C:\\Program Files\\TagScanner\\Tagscan.exe"
+	winrarCommand     = "C:\\Program Files\\WinRAR\\WinRAR.exe"
 )
 
 //Generic appstart
@@ -33,7 +37,13 @@ func StartCmd(command string, settings string) {
 	newRun.Start()
 }
 
-//Graphical apps
+//Graphical Apps
+func StartDoubleCommander(settings string) {
+	start(doublecmdCommand, settings)
+}
+func StartEdge(settings string) {
+	start(edgeCommand, settings)
+}
 func StartExplorer(settings string) {
 	start(ExplorerCommand, settings)
 }
@@ -44,8 +54,14 @@ func StartChrome(settings string) {
 func StartOpera(settings string) {
 	start(operaCommand, settings)
 }
+func StartTagScanner(settings string) {
+	start(tagscannerCommand, settings)
+}
 func StartUWP(settings string) {
 	start(ExplorerCommand, settings)
+}
+func StartWinRar(settings string) {
+	start(winrarCommand, settings)
 }
 
 //Commandline apps
