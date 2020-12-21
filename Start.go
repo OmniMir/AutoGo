@@ -21,6 +21,13 @@ const (
 	operaCommand      = "C:\\Program Files\\Opera\\launcher.exe"
 	tagscannerCommand = "C:\\Program Files\\TagScanner\\Tagscan.exe"
 	winrarCommand     = "C:\\Program Files\\WinRAR\\WinRAR.exe"
+	//UWP Apps
+	app         = "!App"
+	appsFolder  = "shell:AppsFolder\\"
+	calculator  = "Microsoft.WindowsCalculator_8wekyb3d8bbwe"
+	store       = "Microsoft.WindowsStore_8wekyb3d8bbwe"
+	terminal    = "Microsoft.WindowsTerminal_8wekyb3d8bbwe"
+	winTerminal = "wt.exe"
 )
 
 //Generic appstart
@@ -79,6 +86,22 @@ func StartNPM(settings string) {
 }
 
 //Subsidiary apps
+//UWP Apps
+func StartCalculator() {
+	StartUWP(appsFolder + calculator + app)
+}
+func StartStore() {
+	StartUWP(appsFolder + store + app)
+}
+func StartTerminal() {
+	StartUWP(appsFolder + terminal + app)
+}
+func StartTerminalDir(directory string) {
+	directory = "-d " + directory
+	newRun := exec.Command(winTerminal, directory)
+	newRun.Start()
+}
+
 func StartSleep() {
 	time.Sleep(500 * time.Millisecond)
 }
