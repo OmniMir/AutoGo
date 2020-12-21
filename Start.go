@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	//Commandline apps
+	//Commandline Apps
 	cmdCommand      = "cmd"
 	startCommand    = "/C start"
 	apmCommand      = "apm"
@@ -54,7 +54,6 @@ func StartEdge(settings string) {
 func StartExplorer(settings string) {
 	start(ExplorerCommand, settings)
 }
-
 func StartChrome(settings string) {
 	start(chromeCommand, settings)
 }
@@ -71,7 +70,7 @@ func StartWinRar(settings string) {
 	start(winrarCommand, settings)
 }
 
-//Commandline apps
+//Commandline Apps
 func StartAPM(settings string) {
 	settings = startCommand + Space + apmCommand + Space + settings
 	start(cmdCommand, settings)
@@ -85,7 +84,6 @@ func StartNPM(settings string) {
 	start(cmdCommand, settings)
 }
 
-//Subsidiary apps
 //UWP Apps
 func StartCalculator() {
 	StartUWP(appsFolder + calculator + app)
@@ -102,6 +100,7 @@ func StartTerminalDir(directory string) {
 	newRun.Start()
 }
 
+//Subsidiary Apps
 func StartSleep() {
 	time.Sleep(500 * time.Millisecond)
 }

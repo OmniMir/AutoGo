@@ -106,7 +106,7 @@ func downloads() {
 }
 
 func manga() {
-	//My mangg folders
+	//My manga folders
 	StartExplorer("K:\\Манга")
 	StartExplorer("G:\\Download")
 	//Tool for renaming
