@@ -38,6 +38,9 @@ Run AutoGo --comics
 Blinder()
 return
 
+;Ruble (Alt + H)
+!h::
+Send {U+20BD} ; Unicode Symbol ₽
 return
 
 ;Search in Google (RightWin + ?)
