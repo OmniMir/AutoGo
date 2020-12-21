@@ -25,12 +25,6 @@ Send #v
 Send {Blind}{Ctrl up}
 return
 
-;Chrome to Opera (RightWin + O)
-#>o::
-Send !d
-Copy()
-Send ^w
-Run .\AutoGo.exe --opera
 return
 
 ;Search in Google (RightWin + ?)
@@ -86,6 +80,35 @@ If WinActive(ahk_exe Explorer.exe)
 }
 
 
+;;BROWSERS CONTROL (Chromium-based: Chrome, Edge, Opera and etc.)
+If WinActive(ahk_class Chrome_WidgetWin_1)
+{
+	;Chrome to Edge (AltGr + E)
+	*!>e::
+	Send !d
+	Copy()
+	Send ^w
+	Run AutoGo --edge
+	return
+
+	;Chrome to Opera (AltGr + O)
+	*!>o::
+	Send !d
+	Copy()
+	Send ^w
+	Run AutoGo --opera
+	return
+
+	#!^Left::
+	Send ^+t
+	return
+}
+
+
+;;MARKDOWN STYLE
+;Markdown Asterisk (AltGr + "*")
+*!>sc037::
+Send {Text}\*
 return
 
 ;Arrow Equal (Ctrl + "=")
