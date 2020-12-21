@@ -1,14 +1,13 @@
 package main
 
 import (
-	. "github.com/OmniMir/AutoGo/libs"
 	"github.com/lxn/walk"
 	. "github.com/lxn/walk/declarative"
 	"net/http"
 )
 
 //Windows GUI application
-func main() {
+func ParadigmShift() {
 	var mainWindow *walk.MainWindow
 
 	err := MainWindow{
@@ -89,7 +88,7 @@ func downloads() {
 	//My sites
 	StartChrome("--new-window")
 	StartSleep()
-	StartChrome("baibako.tv/browse.php")
+	StartChrome("baibako.tv/browse.php?search=&incldead=0&cat=0&videoformat=4")
 	StartSleep()
 	StartChrome("newstudio.tv/")
 	StartSleep()
@@ -107,7 +106,7 @@ func downloads() {
 }
 
 func manga() {
-	//My mangg folders
+	//My manga folders
 	StartExplorer("K:\\Манга")
 	StartExplorer("G:\\Download")
 	//Tool for renaming
@@ -119,7 +118,7 @@ func series() {
 	StartApp("C:\\Program Files\\MPC-HC\\mpc-hc64.exe")
 	StartApp("C:\\Program Files (x86)\\Unified Remote\\RemoteServerWin.exe")
 	//Remote control on smartphone via webhook
-	_ , err := http.Get("https://vash.omnimir.ru/macrodroid/serials.php")
+	_, err := http.Get("https://vash.omnimir.ru/macrodroid/serials.php")
 	Check(err)
 	//My series folders
 	StartExplorer("G:\\Torrent")
