@@ -10,6 +10,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;@Ahk2Exe-SetCompanyName OmniMir
 ;@Ahk2Exe-SetVersion 1.0
 
+;;USEFUL LINKS
+;;All Hotkeys https://www.autohotkey.com/docs/Hotkeys.htm
+;;List of Keys https://www.autohotkey.com/docs/KeyList.htm
+;;WinMove Function https://www.autohotkey.com/docs/commands/WinMove.htm
 
 ;;VARIABLES
 WinWidth := A_ScreenWidth
