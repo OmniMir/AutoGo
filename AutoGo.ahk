@@ -22,8 +22,21 @@ WinHeight := (A_ScreenHeight - 40) ;Windows Taskbar Height = 40
 
 
 ;;HOTKEYS
+;Accent Mark (Alt + "`")
+!sc029::
+Send {U+0301} ;Unicode Symbol  ́
 return
 
+;Arrow Plus (Ctrl + "-")
+^-::
+Send {+}
+Send {>}
+return
+
+;Arrow Equal (Ctrl + "=")
+^=::
+Send {=}
+Send {>}
 return
 
 ;Clipboard History (Ctrl + Win + X)
@@ -49,10 +62,6 @@ Copy()
 Run AutoGo --google
 return
 
-;Arrow Plus (Ctrl + "-")
-^-::
-Send {+}
-Send {>}
 
 ;;WINDOWS EXPLORER CONTROL
 If WinActive(ahk_exe Explorer.exe)
