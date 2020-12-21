@@ -16,6 +16,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;;WinMove Function https://www.autohotkey.com/docs/commands/WinMove.htm
 
 ;;VARIABLES
+AutoGo := ".\AutoGo.exe"
 WinWidth := A_ScreenWidth
 WinHeight := (A_ScreenHeight - 40)/2
 
@@ -42,7 +43,7 @@ return
 ;Search in Google (RightWin + ?)
 #>sc035::
 Copy()
-Run .\AutoGo.exe --google
+Run AutoGo --google
 return
 
 ;Arrow Plus (Ctrl + "-")
