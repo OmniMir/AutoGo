@@ -11,10 +11,6 @@ WinHeight := (A_ScreenHeight - 40)/2
 
 
 ;;HOTKEYS
-;Comics Increment (Ctrl + Win + V)
-^#v::
-Run .\AutoGo.exe --comics
-Send {Blind}{Ctrl up}
 return
 
 return
@@ -22,7 +18,13 @@ return
 ;Clipboard History (Ctrl + Win + X)
 ^#x::
 Send #v
-Send {Blind}{Ctrl up}
+Blinder()
+return
+
+;Comics Increment (Ctrl + Win + V)
+^#v::
+Run AutoGo --comics
+Blinder()
 return
 
 return
@@ -190,6 +192,14 @@ return
 
 
 ;;FUNCTIONS
+;Hotkeys can be glued, When they cross. Therefore make them Up via Blind
+Blinder(){
+	Send {Blind}{Ctrl up}
+	Send {Blind}{Shift up}
+	Send {Blind}{Alt up}
+	Send {Blind}{Win up}
+}
+
 ;Copy text to Clipboard
 Copy(){ 
   Sleep 100
