@@ -111,15 +111,40 @@ If WinActive(ahk_class Chrome_WidgetWin_1)
 Send {Text}\*
 return
 
-;Arrow Equal (Ctrl + "=")
-^=::
-Send {=}
-Send {>}
+;Markdown Brackets (Ctrl + "(")
+^sc00A::
+Send {Text})_
+Send {Home}
+Send {Text} _(
+Send {End}
+Send {Left 2}
 return
 
-;Accent mark (Win + "`")
-#sc029::
-Send {U+0301}
+;Markdown Crossing (Ctrl + "~")
+^sc029::
+Send {Text}~~
+Send {Home}
+Send {Text}~~
+Send {End}
+Send {Left 2}
+return
+
+;Markdown Link (Ctrl + "*")
+^sc037::
+Send {Text}**
+Send {Home}
+Send {Text}**
+Send {End}
+Send {Left 2}
+return
+
+;Markdown Link (Ctrl + ")")
+^sc00B::
+Send {Text}]()
+Send {Home}
+Send {Text}[
+Send {End}
+Send {Left}
 return
 
 
