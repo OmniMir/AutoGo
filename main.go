@@ -13,6 +13,7 @@ func main() {
 	comics := flag.Bool("comics", false, "Comics Increment")
 	doublecmd := flag.Bool("doublecmd", false, "From Explorer to Double Commander")
 	edge := flag.Bool("edge", false, "From Chrome to Edge")
+	freegames := flag.Bool("freegames", false, "Free Games from Digital Stores")
 	google := flag.Bool("google", false, "Call to Google")
 	movies := flag.Bool("movies", false, "Comics Increment")
 	opera := flag.Bool("opera", false, "From Chrome to Opera")
@@ -36,6 +37,8 @@ func main() {
 		DoubleCommanderIt()
 	} else if *edge {
 		EdgeIt()
+	} else if *freegames {
+		FreeGamesThursday()
 	} else if *google {
 		GoogleIt()
 	} else if *movies {
