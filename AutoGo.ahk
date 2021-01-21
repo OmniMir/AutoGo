@@ -121,45 +121,58 @@ return
 
 
 ;;WINDOWS EXPLORER CONTROL
-If WinActive(ahk_exe Explorer.exe)
+;Comics Increment Folder (Ctrl + Win + C)
+^#c::
+if WinActive("ahk_exe Explorer.exe")
 {
-	;Comics Increment Folder (Ctrl + Win + C)
-	^#c::
 	Send {F2}
 	Copy()
 	Send {Escape}
 	Run AutoGo --comics
 	Blinder()
-	return
+}
+return
 
-	;Explorer to Double Commander (AltGr + C)
-	*!>c::
+;Explorer to Double Commander (AltGr + D)
+<^>!d::
+if WinActive("ahk_exe Explorer.exe")
+{
 	Send ^l
 	Copy()
 	Run AutoGo --doublecmd
 	return
+}
+return
 
-	;Explorer to TagScanner (AltGr + M)
-	*!>m::
+;Explorer to TagScanner (AltGr + M)
+<^>!m::
+if WinActive("ahk_exe Explorer.exe")
+{
 	Send ^l
 	Copy()
 	Run AutoGo --tagscanner
-	return
+}
+return
 
-	;Explorer to Windows Terminal (AltGr + T)
-	*!>t::
+;Explorer to Windows Terminal (AltGr + T)
+<^>!t::
+if WinActive("ahk_exe Explorer.exe")
+{
 	Send ^l
 	Copy()
 	Run AutoGo --terminal
-	return
+}
+return
 
-	;Explorer to WinRAR (AltGr + R)
-	*!>r::
+;Explorer to WinRAR (AltGr + R)
+<^>!r::
+if WinActive("ahk_exe Explorer.exe")
+{
 	Send ^l
 	Copy()
 	Run AutoGo --winrar
-	return
 }
+return
 
 
 ;;BROWSERS CONTROL (Chromium-based: Chrome, Edge, Opera and etc.)
