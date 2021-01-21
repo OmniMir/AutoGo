@@ -17,6 +17,7 @@ func main() {
 	google := flag.Bool("google", false, "Call to Google")
 	movies := flag.Bool("movies", false, "Comics Increment")
 	opera := flag.Bool("opera", false, "From Chrome to Opera")
+	newcomics := flag.Bool("newcomics", false, "New Comics at Wednesday")
 	paradigm := flag.Bool("paradigm", false, "Paradigm Shift")
 	tagscanner := flag.Bool("tagscanner", false, "From Explorer to TagScanner")
 	terminal := flag.Bool("terminal", false, "Windows Terminal")
@@ -43,6 +44,8 @@ func main() {
 		GoogleIt()
 	} else if *movies {
 		ToMovies()
+	} else if *newcomics {
+		NewComicsDay()
 	} else if *opera {
 		OperaIt()
 	} else if *paradigm {
