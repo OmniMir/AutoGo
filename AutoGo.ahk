@@ -62,6 +62,18 @@ Run AutoGo --comics
 Blinder()
 return
 
+;Current Date  (Ctrl + Alt + D)
+^!d::
+FormatTime CurrentTime,, dd.MM.yyyy ;10.01.2019
+Send %CurrentTime%
+return
+
+;Current Time  (Shift + Ctrl + Alt + D)
++^!d::
+FormatTime CurrentTime,, HH:mm ;15:25
+Send %CurrentTime%
+return
+
 ;Ruble (Alt + H)
 !h::
 Send {U+20BD} ; Unicode Symbol ₽
