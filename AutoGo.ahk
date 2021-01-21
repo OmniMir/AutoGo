@@ -187,6 +187,60 @@ If WinActive(ahk_class Chrome_WidgetWin_1)
 }
 
 
+;;CAPSLOCK CONTROL (Explorer, Trello, WinRAR)
+CapsLock & w::
+;Explorer Up to Folder
+if WinActive("ahk_exe Explorer.exe")
+{
+	Send {Alt down}
+	Send {Up}
+	Send {Alt up}
+	Send {Up}
+	Send {Enter}
+}
+;Trello Up to Card
+if WinActive("ahk_exe msedge.exe")
+{
+	Send k
+}
+;WinRAR Down to Archive
+if WinActive("ahk_exe WinRAR.exe")
+{
+	Send {Alt down}
+	Send {Up}
+	Send {Alt up}
+	Send {Up}
+	Send {Enter}
+}
+return
+
+CapsLock & s::
+;Explorer Down to Folder
+if WinActive("ahk_exe Explorer.exe")
+{
+	Send {Alt down}
+	Send {Up}
+	Send {Alt up}
+	Send {Down}
+	Send {Enter}
+}
+;Trello Down to Card
+if WinActive("ahk_exe msedge.exe")
+{
+	Send j
+}
+;WinRAR Down to Archive
+if WinActive("ahk_exe WinRAR.exe")
+{
+	Send {Alt down}
+	Send {Up}
+	Send {Alt up}
+	Send {Down}
+	Send {Enter}
+}
+return
+
+
 ;;MARKDOWN STYLE
 ;Markdown Asterisk (AltGr + "*")
 *!>sc037::
