@@ -71,18 +71,7 @@ func StartWinRar(settings string) {
 }
 
 //Commandline Apps
-func StartAPM(settings string) {
-	settings = startCommand + Space + apmCommand + Space + settings
-	start(cmdCommand, settings)
-}
-func StartComposer(settings string) {
-	settings = startCommand + Space + composerCommand + Space + settings
-	start(cmdCommand, settings)
-}
-func StartNPM(settings string) {
-	settings = startCommand + Space + npmCommand + Space + settings
-	start(cmdCommand, settings)
-}
+
 
 //UWP Apps
 func StartCalculator() {
