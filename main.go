@@ -21,7 +21,7 @@ func main() {
 	paradigm := flag.Bool("paradigm", false, "Paradigm Shift")
 	tagscanner := flag.Bool("tagscanner", false, "From Explorer to TagScanner")
 	terminal := flag.Bool("terminal", false, "Windows Terminal")
-	update := flag.Bool("update", false, "Update Your System")
+	update := flag.Bool("update", false, "Update Your System at Friday")
 	winrar := flag.Bool("winrar", false, "From Explorer to WinRAR")
 	wrestling := flag.Bool("wrestling", false, "View All New Wrestling")
 	flag.Parse()
