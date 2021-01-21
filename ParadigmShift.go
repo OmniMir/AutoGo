@@ -63,14 +63,16 @@ func comics() {
 	//Comics reading
 	StartApp("C:\\Program Files\\CDisplayEx\\CDisplayEx.exe")
 	StartCmd("C:\\Windows\\System32\\notepad.exe", "K:\\Комиксы\\Список.txt")
-	//StartApp("K:\\Комиксы\\Список.txt")
-	StartChrome("--app-id=cbbipihhaanmdjaclfmpjfnnecifpjdn")
+	StartEdge("--app-id=cbbipihhaanmdjaclfmpjfnnecifpjdn")
 	//My comics folders
 	StartExplorer("G:\\Comics")
 	StartSleep()
+	StartSleep()
 	StartExplorer("K:\\Комиксы")
 	StartSleep()
+	StartSleep()
 	StartExplorer("G:\\Comics")
+	StartSleep()
 	StartSleep()
 	StartExplorer("K:\\Комиксы")
 }
