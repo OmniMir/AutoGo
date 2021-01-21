@@ -8,6 +8,7 @@ import (
 func main() {
 	//Reading special flags
 	alphabet := flag.Bool("alphabet", false, "Sort Clipboard in Alphabetical Order")
+	anime := flag.Bool("anime", false, "View All New Anime")
 	comics := flag.Bool("comics", false, "Comics Increment")
 	doublecmd := flag.Bool("doublecmd", false, "From Explorer to Double Commander")
 	edge := flag.Bool("edge", false, "From Chrome to Edge")
@@ -24,6 +25,8 @@ func main() {
 	//Choosing right mode
 	if *alphabet {
 		AlphabetSort()
+	} else if *anime {
+		ComicsIncrement()
 	} else if *comics {
 		ComicsIncrement()
 	} else if *doublecmd {
