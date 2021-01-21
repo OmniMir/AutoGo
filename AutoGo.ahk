@@ -296,8 +296,8 @@ Send {End}
 Send {Left 2}
 return
 
-;Markdown Link (Ctrl + "*")
-^sc037::
+;Markdown Link (Ctrl + 8)
+^sc009::
 Send {Text}**
 Send {Home}
 Send {Text}**
