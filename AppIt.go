@@ -4,6 +4,11 @@ import (
 	"github.com/go-vgo/robotgo/clipboard"
 )
 
+func ChromeIt() {
+	url, _ := clipboard.ReadAll()
+	StartChrome(url)
+}
+
 func DoubleCommanderIt() {
 	dir, _ := clipboard.ReadAll()
 	StartDoubleCommander(dir)
