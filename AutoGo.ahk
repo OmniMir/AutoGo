@@ -273,8 +273,8 @@ return
 
 
 ;;MARKDOWN STYLE
-;Markdown Asterisk (AltGr + "*")
-*!>sc037::
+;Markdown Asterisk (AltGr + 8)
+*!>sc009::
 Send {Text}\*
 return
 
