@@ -94,6 +94,20 @@ return
 Send {U+2003} ; Unicode Symbol "	"
 return
 
+;Paste to Begining (AltGr + <)
+<^>!sc033::
+Send {Home}
+Send ^v
+Send {Down}
+return
+
+;Paste to Ending (AltGr + >)
+<^>!sc034::
+Send {End}
+Send ^v
+Send {Down}
+return
+
 ;Ruble (Alt + H)
 !h::
 Send {U+20BD} ; Unicode Symbol ₽
