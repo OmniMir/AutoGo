@@ -74,6 +74,26 @@ FormatTime CurrentTime,, HH:mm ;15:25
 Send %CurrentTime%
 return
 
+;Ellipsis (Alt + .)
+!.::
+Send {U+2026} ; Unicode Symbol …
+return
+
+;En Dash (Alt + -)
+!sc00C::
+Send {U+2013} ; Unicode Symbol –
+return
+
+;Em Dash (Shift + Alt + -)
++!sc00C::
+Send {U+2014} ; Unicode Symbol —
+return
+
+;Em Space (Alt + Space)
+!Space::
+Send {U+2003} ; Unicode Symbol "	"
+return
+
 ;Ruble (Alt + H)
 !h::
 Send {U+20BD} ; Unicode Symbol ₽
