@@ -176,28 +176,46 @@ return
 
 
 ;;BROWSERS CONTROL (Chromium-based: Chrome, Edge, Opera and etc.)
-If WinActive(ahk_class Chrome_WidgetWin_1)
+;Chromium to Chrome (AltGr + C)
+<^>!c::
+if WinActive("ahk_class Chrome_WidgetWin_1")
 {
-	;Chrome to Edge (AltGr + E)
-	*!>e::
+	Send !d
+	Copy()
+	Send ^w
+	Run AutoGo --chrome
+}
+return
+
+;Chromium to Edge (AltGr + E)
+<^>!e::
+if WinActive("ahk_class Chrome_WidgetWin_1")
+{
 	Send !d
 	Copy()
 	Send ^w
 	Run AutoGo --edge
-	return
+}
+return
 
-	;Chrome to Opera (AltGr + O)
-	*!>o::
+;Chromium to Opera (AltGr + O)
+<^>!o::
+if WinActive("ahk_class Chrome_WidgetWin_1")
+{
 	Send !d
 	Copy()
 	Send ^w
 	Run AutoGo --opera
-	return
-
-	#!^Left::
-	Send ^+t
-	return
 }
+return
+
+;Open Closed Tab (Ctrl + Win + Z)
+^#z::
+if WinActive("ahk_class Chrome_WidgetWin_1")
+{
+	Send ^+t
+}
+return
 
 
 ;;CAPSLOCK CONTROL (Explorer, Trello, WinRAR)
