@@ -15,6 +15,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;;List of Keys https://www.autohotkey.com/docs/KeyList.htm
 ;;WinMove Function https://www.autohotkey.com/docs/commands/WinMove.htm
 
+;;DEFAULT STATE OF LOCKS (+Numlock -CapsLock -ScrollLock)
+SetNumlockState AlwaysOn
+SetCapsLockState AlwaysOff
+SetScrollLockState AlwaysOff
+
 ;;VARIABLES
 AutoGo := ".\AutoGo.exe"
 WinWidth := A_ScreenWidth
