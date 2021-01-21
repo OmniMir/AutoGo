@@ -45,6 +45,9 @@ func StartCmd(command string, settings string) {
 }
 
 //Graphical Apps
+func StartChrome(settings string) {
+	start(chromeCommand, settings)
+}
 func StartDoubleCommander(settings string) {
 	start(doublecmdCommand, settings)
 }
@@ -53,9 +56,6 @@ func StartEdge(settings string) {
 }
 func StartExplorer(settings string) {
 	start(ExplorerCommand, settings)
-}
-func StartChrome(settings string) {
-	start(chromeCommand, settings)
 }
 func StartOpera(settings string) {
 	start(operaCommand, settings)
