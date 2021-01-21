@@ -317,27 +317,27 @@ return
 
 ;;CALL TO APPS
 ;Chrome Update Service (Ctrl + Alt + U)
-^!u::
+<^<!u::
 Run .\ServiceChrome.exe
 return
 
 ;Office Service (Ctrl + Alt + O)
-^!o::
+<^<!o::
 Run .\ServiceOffice.exe
 return
 
 ;Passwords (Ctrl + Alt + P)
-^!p::
+<^<!p::
 Run %A_ProgramFiles%\KeePassXC\KeePassXC.exe
 return
 
 ;WinRAR (Ctrl + Alt + R)
-^!r::
+<^<!r::
 Run %A_ProgramFiles%\WinRAR\WinRAR.exe
 return
 
 ;Notepad (Ctrl + Alt + Б)
-^!sc033::
+<^<!sc033::
 Run %A_WinDir%\System32\notepad.exe
 return
 
