@@ -4,7 +4,7 @@ Automation in Go
 
 
 
-**Build**
+#### Build
 
 git clone https://github.com/OmniMir/AutoGo.git
 
@@ -30,7 +30,7 @@ _ldflags:_
 
 
 
-**Installation**
+#### Installation
 
 Copy bin files (or make them) to your folder.
 
@@ -40,4 +40,4 @@ Rejoice
 
 
 
-**Using**
+#### Using
