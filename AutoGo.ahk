@@ -278,7 +278,7 @@ return
 Send {Text}\*
 return
 
-;Markdown Brackets (Ctrl + "(")
+;Markdown Brackets (Ctrl + '(')
 ^sc00A::
 Send {Text})_
 Send {Home}
@@ -287,7 +287,7 @@ Send {End}
 Send {Left 2}
 return
 
-;Markdown Crossing (Ctrl + "~")
+;Markdown Crossing (Ctrl + '~')
 ^sc029::
 Send {Text}~~
 Send {Home}
@@ -305,7 +305,7 @@ Send {End}
 Send {Left 2}
 return
 
-;Markdown Link (Ctrl + ")")
+;Markdown Link (Ctrl + ')')
 ^sc00B::
 Send {Text}]()
 Send {Home}
