@@ -33,7 +33,7 @@ Send {U+0301} ;Unicode Symbol  ́
 return
 
 ;Arrow Plus (Ctrl + "-")
-^-::
+^sc00C::
 Send {+}
 Send {>}
 return
@@ -45,7 +45,7 @@ Send {>}
 return
 
 ;Clipboard Alphabet Sort (AltGr + Z)
-*!>z::
+<^>!z::
 Run AutoGo --alphabet
 Blinder()
 return
@@ -140,7 +140,6 @@ if WinActive("ahk_exe Explorer.exe")
 	Send ^l
 	Copy()
 	Run AutoGo --doublecmd
-	return
 }
 return
 
@@ -359,7 +358,7 @@ Ctrl & Space::
 WinSet, AlwaysOnTop, Toggle, A ; A is Active Window
 return
 
-;Window to NotePad (Ctrl + AltGr + Down)
+;Window to NotePad (AltGr + Right)
 RAlt & Right::
 indent := 300
 WinRestore A
