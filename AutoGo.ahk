@@ -208,6 +208,16 @@ if WinActive("ahk_class Chrome_WidgetWin_1")
 }
 return
 
+;Next Tab (Ctrl + Mouse Forward Button)
+<^XButton2::
+^Tab
+return
+
+;Previous Tab (Ctrl + Mouse Previous Button)
+<^XButton1::
++^Tab
+return
+
 ;Open Closed Tab (Ctrl + Win + Z)
 ^#z::
 if WinActive("ahk_class Chrome_WidgetWin_1")
