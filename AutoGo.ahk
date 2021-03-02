@@ -352,6 +352,16 @@ return
 
 
 ;;WINDOW MANAGMENT
+;Next Window (Alt + Mouse Forward Button)
+<!XButton1::
+!Esc
+return
+
+;Previous Window (Alt + Mouse Previous Button)
+<!XButton2::
+!+Esc
+return
+
 ;Window Max when Win+Up not working (AltGr + RightWin)
 RAlt & RWin::
 WinMaximize A
