@@ -119,6 +119,10 @@ Copy()
 Run AutoGo --google
 return
 
+;Smile (Alt + ')')
+!sc00B::
+Send {U+30C4} ; Unicode Symbol ツ
+return
 
 ;;WINDOWS EXPLORER CONTROL
 ;Comics Increment Folder (Ctrl + Win + C)
