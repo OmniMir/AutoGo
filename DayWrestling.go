@@ -5,7 +5,10 @@ const (
 	wweSmackdown = "https://pwnews.net/blog/1-0-1"
 )
 
-func WrestlingDay() {
+func WrestlingDay1() {
 	StartChrome(wweRaw)
+}
+
+func WrestlingDay2() {
 	StartChrome(wweSmackdown)
 }

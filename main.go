@@ -23,7 +23,8 @@ func main() {
 	terminal := flag.Bool("terminal", false, "Windows Terminal")
 	update := flag.Bool("update", false, "Update Your System at Friday")
 	winrar := flag.Bool("winrar", false, "From Explorer to WinRAR")
-	wrestling := flag.Bool("wrestling", false, "View All New Wrestling")
+	wrestling1 := flag.Bool("wrestling1", false, "View All Raw Wrestling")
+	wrestling2 := flag.Bool("wrestling2", false, "View All SmackDown Wrestling")
 	flag.Parse()
 
 	//Choosing right mode
@@ -59,8 +60,10 @@ func main() {
 		UpdateFriday()
 	} else if *winrar {
 		WinRarIt()
-	} else if *wrestling {
-		WrestlingDay()
+	} else if *wrestling1 {
+		WrestlingDay1()
+	} else if *wrestling2{
+		WrestlingDay2()
 	} else {
 		fmt.Println("You need right flag")
 	}
