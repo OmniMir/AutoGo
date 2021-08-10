@@ -399,8 +399,8 @@ Ctrl & Space::
 WinSet, AlwaysOnTop, Toggle, A ; A is Active Window
 return
 
-;Window to NotePad (AltGr + Right)
-RAlt & Right::
+;Window to NotePad (AltGr + Left)
+RAlt & Left::
 indent := 300
 WinRestore A
 WinMove A, , (indent/2), (WinHeight/2 - indent), (WinWidth - indent), (WinHeight/2 + indent)
