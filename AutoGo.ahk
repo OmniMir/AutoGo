@@ -133,6 +133,7 @@ return
 ;Search in Google (RightWin + ?)
 #>sc035::
 Copy()
+Sleep 200
 Run AutoGo --google
 return
 
