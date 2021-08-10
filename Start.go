@@ -72,7 +72,6 @@ func StartWinRar(settings string) {
 
 //Commandline Apps
 
-
 //UWP Apps
 func StartCalculator() {
 	StartUWP(appsFolder + calculator + app)

@@ -62,7 +62,7 @@ func main() {
 		WinRarIt()
 	} else if *wrestling1 {
 		WrestlingDay1()
-	} else if *wrestling2{
+	} else if *wrestling2 {
 		WrestlingDay2()
 	} else {
 		fmt.Println("You need right flag")
