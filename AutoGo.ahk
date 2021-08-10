@@ -108,6 +108,23 @@ Send ^v
 Send {Down}
 return
 
+;Paste to Middle (AltGr + L)
+<^>!l::
+count := StrLen(Clipboard)
+Send ^v
+Send {Left %count%}
+Send {Down}
+return
+
+;Paste to Middle Forced (Shift + AltGr + L)
++<^>!l::
+count := StrLen(Clipboard)
+Send ^v
+Send {Delete %count%}
+Send {Left %count%}
+Send {Down}
+return
+
 ;Ruble (Alt + H)
 !h::
 Send {U+20BD} ; Unicode Symbol ₽
